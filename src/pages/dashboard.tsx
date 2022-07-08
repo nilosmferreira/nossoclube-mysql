@@ -55,7 +55,7 @@ export default function Dashboard() {
             <nav className='mt-6'>
               <div>
                 <a
-                  className='w-full font-thin uppercase text-blue-500 flex items-center p-4 my-2 transition-colors duration-200 justify-start bg-gradient-to-r from-white to-blue-100 border-r-4 border-blue-500 dark:from-gray-700 dark:to-gray-800 border-r-4 border-blue-500'
+                  className='w-full font-thin uppercase text-blue-500 flex items-center p-4 my-2 transition-colors duration-200 justify-start bg-gradient-to-r from-white to-blue-100 border-r-4 border-blue-500 dark:from-gray-700 dark:to-gray-800 '
                   href='#'
                 >
                   <span className='text-left'>
@@ -187,9 +187,9 @@ export default function Dashboard() {
           <header className='w-full shadow-lg bg-white dark:bg-gray-700 items-center h-16 rounded-2xl z-40'>
             <div className='relative z-20 flex flex-col justify-center h-full px-3 mx-auto flex-center'>
               <div className='relative items-center pl-1 flex w-full lg:max-w-68 sm:pr-2 sm:ml-0'>
-                <div className='container relative left-0 z-50 flex w-3/4 h-auto h-full'>
+                <div className='container relative left-0 z-50 flex w-3/4 h-auto '>
                   <div className='relative flex items-center w-full lg:w-64 h-full group'>
-                    <div className='absolute z-50 flex items-center justify-center block w-auto h-10 p-3 pr-2 text-sm text-gray-500 uppercase cursor-pointer sm:hidden'>
+                    <div className='absolute z-50 flex items-center justify-center  w-auto h-10 p-3 pr-2 text-sm text-gray-500 uppercase cursor-pointer sm:hidden'>
                       <svg
                         fill='none'
                         className='relative w-5 h-5'
@@ -501,7 +501,7 @@ export default function Dashboard() {
                   <div className='shadow-lg rounded-2xl bg-white dark:bg-gray-700 w-full'>
                     <p className='font-bold text-md p-4 text-black dark:text-white'>
                       My Tasks
-                      <span className='text-sm text-gray-500 dark:text-gray-300 dark:text-white ml-2'>
+                      <span className='text-sm text-gray-500 dark:text-gray-300  ml-2'>
                         (05)
                       </span>
                     </p>
@@ -1029,7 +1029,7 @@ export default function Dashboard() {
                                 <td className='py-3 px-2 md:px-3  hover:text-blue-500 text-center cursor-pointer'>
                                   7
                                 </td>
-                                <td className='py-3 px-2 md:px-3 md:px-2 relative lg:px-3 hover:text-blue-500 text-center cursor-pointer'>
+                                <td className='py-3 px-2  md:px-2 relative lg:px-3 hover:text-blue-500 text-center cursor-pointer'>
                                   8
                                   <span className='absolute rounded-full h-2 w-2 bg-yellow-500 bottom-0 left-1/2 transform -translate-x-1/2'></span>
                                 </td>

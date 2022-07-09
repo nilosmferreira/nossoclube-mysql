@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 import { LogoVitaliza } from './LogoVitaliza';
 import { NavBar } from './NavBar';
 import { Profile } from './Profile';
 type PageCorpoProps = {
   title: string;
-  children?: ReactElement;
+  children?: ReactNode;
 };
-export function PageCorpo({ title }: PageCorpoProps) {
+export function PageCorpo({ title, children }: PageCorpoProps) {
   return (
     /* Fundo */
     <main className='bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative'>
@@ -53,7 +53,9 @@ export function PageCorpo({ title }: PageCorpoProps) {
             </div>
           </header>
           <div className='overflow-auto h-screen pb-24 pt-2 pr-2 pl-2 md:pt-0 md:pr-0 md:pl-0'>
-            Corpo
+            <div className='flex flex-col flex-wrap sm:flex-row'>
+              {children}
+            </div>
           </div>
         </div>
       </div>

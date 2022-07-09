@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ReactElement } from 'react';
 import { LogoVitaliza } from './LogoVitaliza';
 import { NavBar } from './NavBar';
+import { Profile } from './Profile';
 type PageCorpoProps = {
   title: string;
   children?: ReactElement;
@@ -36,7 +37,8 @@ export function PageCorpo({ title }: PageCorpoProps) {
                 <span className='text-lg text-gray-500 font-bold uppercase text-start'>
                   {title}
                 </span>
-                <div className='flex flex-row'>
+                <Profile />
+                {/* <div className='flex flex-row'>
                   <img
                     alt='profil'
                     src='https://github.com/nilosmferreira.png'
@@ -45,8 +47,8 @@ export function PageCorpo({ title }: PageCorpoProps) {
                   <div className='hidden md:block ml-2'>
                     <p className='text-base text-gray-800'>Nilo Ferreira</p>
                     <span className='text-base text-gray-500'>Desenv</span>
-                  </div>
-                </div>
+                  </div>                 </div>
+                  */}
               </div>
             </div>
           </header>

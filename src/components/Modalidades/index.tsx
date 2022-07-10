@@ -57,3 +57,4 @@ export function Modalidades() {
     </div>
   );
 }
+export default data;

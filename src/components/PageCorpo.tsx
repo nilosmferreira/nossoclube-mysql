@@ -6,9 +6,10 @@ import { NavBar } from './NavBar';
 import { Profile } from './Profile';
 type PageCorpoProps = {
   title: string;
-  children?: ReactNode;
+  children: ReactNode;
+  center?: boolean;
 };
-export function PageCorpo({ title, children }: PageCorpoProps) {
+export function PageCorpo({ title, children, center = false }: PageCorpoProps) {
   return (
     /* Fundo */
     <main className='bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative'>
@@ -16,7 +17,7 @@ export function PageCorpo({ title, children }: PageCorpoProps) {
       {/* <Head>
         <title>Vitaliza - {title}</title>
       </Head> */}
-      <div className='flex items-start justify-between'>
+      <div className='flex items-start justify-between max-w-screen-xl mx-auto'>
         <div className='h-screen hidden lg:block my-4 ml-4 shadow-lg relative w-80'>
           <aside className='bg-white h-full rounded-2xl dark:bg-gray-700'>
             <div className='flex items-center justify-center pt-4'>
@@ -38,22 +39,15 @@ export function PageCorpo({ title, children }: PageCorpoProps) {
                   {title}
                 </span>
                 <Profile />
-                {/* <div className='flex flex-row'>
-                  <img
-                    alt='profil'
-                    src='https://github.com/nilosmferreira.png'
-                    className=' object-cover rounded-full h-12 w-12 '
-                  />
-                  <div className='hidden md:block ml-2'>
-                    <p className='text-base text-gray-800'>Nilo Ferreira</p>
-                    <span className='text-base text-gray-500'>Desenv</span>
-                  </div>                 </div>
-                  */}
               </div>
             </div>
           </header>
-          <div className='overflow-auto h-screen pb-24 pt-2 pr-2 pl-2 md:pt-0 md:pr-0 md:pl-0'>
-            <div className='flex flex-col flex-wrap sm:flex-row'>
+          <div className='overflow-auto h-screen relative pb-24 pt-2 pr-2 pl-2 md:pt-0 md:pr-0 md:pl-0'>
+            <div
+              className={`flex flex-col flex-wrap sm:flex-row ${
+                center && 'h-full w-full'
+              }`}
+            >
               {children}
             </div>
           </div>

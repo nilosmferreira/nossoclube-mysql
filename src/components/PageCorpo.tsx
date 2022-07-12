@@ -12,7 +12,7 @@ type PageCorpoProps = {
 export function PageCorpo({ title, children, center = false }: PageCorpoProps) {
   return (
     /* Fundo */
-    <main className='bg-gray-100 dark:bg-gray-800 rounded-2xl h-screen overflow-hidden relative'>
+    <main className='bg-gray-100 dark:bg-gray-800  h-screen overflow-hidden relative'>
       {/*Alinhamento*/}
       {/* <Head>
         <title>Vitaliza - {title}</title>

@@ -19,10 +19,11 @@ export function ActiveLink({
   if (shouldMatchExactHref && (asPath === rest.href || asPath === rest.as)) {
     isActive = true;
   }
-
+  // console.log(shouldMatchExactHref, rest.href, rest.as, asPath);
   if (
     !shouldMatchExactHref &&
     (asPath.startsWith(String(rest.href)) || asPath.startsWith(String(rest.as)))
+    // String(rest.href).startsWith(asPath)
   ) {
     isActive = true;
   }

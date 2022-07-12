@@ -18,7 +18,11 @@ export function NavLink({
   ...rest
 }: NavLinkProps) {
   return (
-    <ActiveLink href={href} passHref shouldMatchExactHref>
+    <ActiveLink
+      href={href}
+      passHref
+      shouldMatchExactHref={shouldMatchExactHref}
+    >
       <a {...rest}>
         <span className='text-left'>
           {<Icon size={20} className='fill-current' />}

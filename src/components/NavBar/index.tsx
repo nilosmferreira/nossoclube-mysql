@@ -4,11 +4,11 @@ import {
   IdentificationCard,
   PersonSimpleRun,
   Trophy,
-  UserCircleGear,
   UserGear,
 } from 'phosphor-react';
 import { NavLink } from './NavLink';
 type Item = {
+  shouldMatchExactHref?: boolean;
   caption: string;
   href: string;
   icon: React.ForwardRefExoticComponent<
@@ -17,6 +17,7 @@ type Item = {
 };
 const menus: Item[] = [
   {
+    shouldMatchExactHref: true,
     caption: 'Dashboard',
     href: '/app',
     icon: House,
@@ -30,6 +31,7 @@ const menus: Item[] = [
     caption: 'Modalidade',
     href: '/app/modalidades',
     icon: Trophy,
+    shouldMatchExactHref: false,
   },
   {
     caption: 'Atleta',
@@ -52,6 +54,7 @@ export function NavBar() {
             caption={menu.caption}
             href={menu.href}
             key={menu.href}
+            shouldMatchExactHref={menu.shouldMatchExactHref}
           />
           // <a
           //   href='#'

@@ -4,6 +4,27 @@
 @tailwind variants;
 
 @layer components {
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: green gray;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(37 99 235/1);
+    border-radius: 20px;
+    border: 3px solid rgb(243 244 246/1);
+  }
   .input-default {
     @apply flex-1 appearance-none border border-none w-full py-2 px-4 bg-gray-100 rounded-lg text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent;
   }
